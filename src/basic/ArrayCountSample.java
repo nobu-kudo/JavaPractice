@@ -9,9 +9,10 @@ public class ArrayCountSample {
 		for(int i = 0; i < score.length; i++) {
 		if (score[i] >= 80) {
 			count++;
+		System.out.println((i + 1) + "番目" + score[i] + "点");
 		}
 		}
-		System.out.println("80点以上の人数" + count + "人");
+		System.out.println("合格者数" + count + "人");
 		
 	}
 
