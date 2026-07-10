@@ -28,7 +28,7 @@ public class ArrayTopSample {
 	}
 			//合計点の平均点
 			avg = sum / count;
-	System.out.println("最高得点;" + max+ "点");
+	System.out.println("最高得点;" + max + "点");
 	System.out.println((index + 1) + "番目の人");
 	System.out.println("合格者数" + count + "人");
 	System.out.println("合格者合計点" + sum + "点");
