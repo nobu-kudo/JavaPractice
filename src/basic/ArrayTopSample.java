@@ -19,7 +19,7 @@ public class ArrayTopSample {
 		}
 		if(score[i] >= 80) {
 			//80点を超えた人の参照
-			System.out.println("合格者:" + score[i] + "番目の人");
+			System.out.println("合格者:" + (i+1) + "番目の人");
 			//人数の更新
 			count++;
 			//８０点以上の合計点数
