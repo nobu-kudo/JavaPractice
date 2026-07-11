@@ -8,5 +8,12 @@ public class Student {
 		this.name = name;
 		this.score = score ;
 	}
+	public void showInfo() {
+
+		System.out.println("名前" + this.name);
+		System.out.println("点数" + this.score);
+		
+		
+	}
 
 }
