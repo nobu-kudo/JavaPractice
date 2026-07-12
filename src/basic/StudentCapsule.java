@@ -18,4 +18,10 @@ public class StudentCapsule {
 	public void setScore(int score) {
 		this.score = score;
 	}
+	public void showInfo() {
+		System.out.println("名前:" + name);
+		System.out.println("	点数:" + score);
+	}
+	
+	
 }
