@@ -7,7 +7,7 @@ Javaの学習記録をまとめたリポジトリです。
 - Git/GitHubの操作に慣れる
 - Webアプリケーション開発に必要な知識を身に付ける
 
-＃ 開発環境
+## 開発環境
 
 - Java　21
 - Eclipse Pleiades
