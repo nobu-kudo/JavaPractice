@@ -16,7 +16,7 @@ public class StudentCapsule {
 	
 		StudentCapsule[] students = new StudentCapsule[3];
 		students[0] = new StudentCapsule("桐生", 95);
-		students[1] = new StudentCapsule("万丈", -1);
+		students[1] = new StudentCapsule("万丈", 35);
 		students[2] = new StudentCapsule("猿渡", 65);
 		
 	return students;
