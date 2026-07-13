@@ -1,7 +1,7 @@
 # JavaPractice
 Javaの学習記録をまとめたリポジトリです。
 
-＃＃ 学習目的
+## 学習目的
 
 - Javaの基礎力を身に付ける
 - Git/GitHubの操作に慣れる
