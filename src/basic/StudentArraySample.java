@@ -46,13 +46,18 @@ public class StudentArraySample {
 
 	public static void main(String[] args) {
 		//学生データの作成
-		StudentCapsule[] students = StudentCapsule.createStudents(); 
-		//合格者の表示
+		try {//例外処理
+		StudentCapsule[] students = StudentCapsule.createStudents();
+				//合格者の表示
 		printPassedStudents(students);
 		//検索結果の呼び出し
 		searchStudent(students, "猿渡");
 		//集計の表示
 		printSummary(students);
+		}catch(IllegalArgumentException e) {
+			System.out.println("点数は0～100までの整数を入力してください");
+		}
+
 	}
 
 }

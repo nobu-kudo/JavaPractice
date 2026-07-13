@@ -5,15 +5,18 @@ public class StudentCapsule {
 	private int score;
 	//コンストラクタ
 	public StudentCapsule(String name, int score) {
+		if(score < 0 || score > 100) {
+		throw new IllegalArgumentException("点数は0～100で入力してください");
+		}
 		this.name = name;
 		this.score = score;
 	}
 		
 	public static StudentCapsule[] createStudents() {
-		
+	
 		StudentCapsule[] students = new StudentCapsule[3];
-		students[0] = new StudentCapsule("桐生", 85);
-		students[1] = new StudentCapsule("万丈", 35);
+		students[0] = new StudentCapsule("桐生", 95);
+		students[1] = new StudentCapsule("万丈", -1);
 		students[2] = new StudentCapsule("猿渡", 65);
 		
 	return students;
