@@ -10,6 +10,16 @@ public class StudentArraySample {
 			}
 		}
 	}
+	//名前検索メソッド
+	public static void searchStudent(StudentCapsule[] students, String name) {
+		System.out.println("検索結果");
+		for(int i = 0; i < students.length; i++ ) {
+		if(students[i].getName().equals(name)){
+			students[i].getName().equals(name);
+		students[i].showInfo();
+		}
+		}
+	}
 	//合計点・平均点・最高点・最低点・の集計
 	public static void printSummary(StudentCapsule[] students) {
 		int sum = 0;
@@ -39,6 +49,8 @@ public class StudentArraySample {
 		StudentCapsule[] students = StudentCapsule.createStudents(); 
 		//合格者の表示
 		printPassedStudents(students);
+		//検索結果の呼び出し
+		searchStudent(students, "猿渡");
 		//集計の表示
 		printSummary(students);
 	}
