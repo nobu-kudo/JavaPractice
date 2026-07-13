@@ -30,8 +30,21 @@ public class StudentCapsule {
 		this.score = score;
 	}
 	public void showInfo() {
-		System.out.println("名前:" + name);
-		System.out.println("	点数:" + score);
+		System.out.printf("名前:%s 点数:%d 評価%s%n", name, score, getGrade());
+	}
+	public String getGrade() {
+		
+		if(score >= 90) {
+			return "A";
+		}else if(score >= 80) {
+			return "B";
+		}else if(score >= 70) {
+			return "C";
+		}else if(score >= 60) {
+			return "D";
+		}else {
+			return "F";
+		}
 	}
 	
 	

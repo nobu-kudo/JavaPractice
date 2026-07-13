@@ -1,20 +1,22 @@
 package basic;
 
 public class StudentArraySample {
-
-	public static void main(String[] args) {
-	
-		StudentCapsule[] students = StudentCapsule.createStudents(); 
-		int sum = 0;
-		double average;
-		StudentCapsule topStudent = students[0];
-		StudentCapsule bottomStudent = students[0];
-		
+	//合格者の集計
+	public static void printPassedStudents(StudentCapsule[] students){
 		System.out.println("合格者");
 		for(int i = 0; i < students.length; i++ ) {
 			if(students[i].getScore() >= 80) {
 				students[i].showInfo();
 			}
+		}
+	}
+	//合計点・平均点・最高点・最低点・の集計
+	public static void printSummary(StudentCapsule[] students) {
+		int sum = 0;
+		double average;
+		StudentCapsule topStudent = students[0];
+		StudentCapsule bottomStudent = students[0];
+		for(int i = 0; i < students.length; i++) {
 			sum += students[i].getScore();
 			if(students[i].getScore() > topStudent.getScore()) {
 				topStudent = students[i];
@@ -23,13 +25,22 @@ public class StudentArraySample {
 				bottomStudent = students[i];
 			}
 		}
-		average = (double) sum / students.length;
-		System.out.println("合計点:" + sum);
-		System.out.printf("平均点:%.2f%n", average);
-		System.out.println("最高得点者");
-		topStudent.showInfo();
-		System.out.println("最低得点者");
-		bottomStudent.showInfo();
+			average = (double) sum / students.length;
+			System.out.println("合計点:" + sum);
+			System.out.printf("平均点:%.2f%n", average);
+			System.out.println("最高得点者");
+			topStudent.showInfo();
+			System.out.println("最低得点者");
+			bottomStudent.showInfo();
+	}
+
+	public static void main(String[] args) {
+		//学生データの作成
+		StudentCapsule[] students = StudentCapsule.createStudents(); 
+		//合格者の表示
+		printPassedStudents(students);
+		//集計の表示
+		printSummary(students);
 	}
 
 }
