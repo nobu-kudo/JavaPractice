@@ -7,6 +7,7 @@ public class StudentCapsule {
 	public StudentCapsule(String name, int score) {
 		if( name == null || name.isEmpty()) {
 			throw new IllegalArgumentException("名前を入力してください");
+		
 		}
 		if(score < 0 || score > 100) {
 		throw new IllegalArgumentException("点数は0～100で入力してください");
