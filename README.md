@@ -85,13 +85,12 @@ bmi.jsp（View）
 
 ### 入力画面
 
-（スクリーンショットを追加予定）
+<img width="938" height="488" alt="スクリーンショット 2026-07-15 125314" src="https://github.com/user-attachments/assets/d1e0c4e0-dfe4-4328-8b17-c0faf918c741" />
 
 ### 診断結果
 
-（スクリーンショットを追加予定）
+<img width="956" height="499" alt="スクリーンショット 2026-07-15 125345" src="https://github.com/user-attachments/assets/0d441c01-1cb5-462a-932e-94be289cdf09" />
 
----
 
 ## 今後追加したい機能
 
