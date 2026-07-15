@@ -1,0 +1,61 @@
+@charset "UTF-8";
+body {
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Helvetica Neue",
+        sans-serif;
+
+    background: #ffffff;
+
+    max-width: 500px;
+    margin: 80px auto;
+
+    padding: 30px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+input[type="number"] {
+    width: 100%;
+
+    border: none;
+    border-bottom: 2px solid #ddd;
+
+    padding: 12px 0;
+    margin-bottom: 25px;
+
+    font-size: 18px;
+}
+
+input[type="number"]:focus {
+    outline: none;
+    border-bottom-color: #0071e3;
+}
+
+input[type="submit"] {
+    background: #0071e3;
+    color: white;
+
+    border: none;
+    border-radius: 999px;
+
+    padding: 12px 32px;
+
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    opacity: 0.9;
+}
