@@ -10,11 +10,21 @@ public class StudentInputSample {
 		Scanner scanner = new Scanner(System.in);
 		
 		//名前の入力
+		String name = "";
+		
+		while (name.trim().isEmpty()) {
 		System.out.println("名前を入力してください");
-		String name = scanner.nextLine();
+		name = scanner.nextLine();
+		}
 		//点数の入力
+		int score = -1;
+		
+		while(score < 0 || score > 100) {
 		System.out.println("点数を入力してください");
-		int score = scanner.nextInt();
+		score = scanner.nextInt();
+		
+			
+		}
 		
 		StudentCapsule student = new StudentCapsule(name, score);
 		student.showInfo();
