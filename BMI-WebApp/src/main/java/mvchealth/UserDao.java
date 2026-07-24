@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import com.mysql.cj.jdbc.Driver;
 
 public class UserDao {
 	
@@ -13,12 +14,16 @@ public class UserDao {
 	    // 最初は何も入っていないので null
 		User user =null;
 		
+		
+		
 		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
 		// MySQLデータベースへ接続	
 			Connection con = DriverManager.getConnection(
 				    "jdbc:mysql://localhost:3306/bmi_app",
 				    "root",
-				    "1234");
+				    System.getenv("MYSQL_ROOT_PASSWORD")
+					);
 		
 	    // ログインIDとパスワードが一致するユーザーを検索するSQL
 	    // ? は後から値をセットするプレースホルダー
