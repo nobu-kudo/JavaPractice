@@ -40,35 +40,29 @@ Java(Servlet/JSP)を使用して開発したBMI計算Webアプリです。
 ユーザーが身長(cm)と体重(kg)を入力すると、BMI値を計算して診断結果を表示します。
 
 ---
+##使用技術
 
-## 使用技術
-
-- Java 21
+- Java
 - Servlet
 - JSP
 - JDBC
-- MySQL 8.4
-- HTML5
-- CSS3
+- MySQL
+- HTML
+- CSS
 - Apache Tomcat 11
-- Eclipse Pleiades
+- Eclipse
 - Git / GitHub
 
 ---
 ## 機能
 
-- ログイン認証
-- ログアウト
+- ログイン認証（MySQL）
 - セッション管理
-- 未ログイン時のアクセス制御
+- ログアウト機能
 - 身長・体重入力
-- BMI値の計算
-- BMI値を小数第2位で四捨五入
-- BMI判定（低体重・普通体重・肥満）
-- 診断結果画面表示
+- BMI計算
+- BMI判定表示
 - MVCモデルによる実装
-- JDBCによるデータベース接続
-- MySQLによるユーザー管理
 ---
 
 ## システム構成（MVC）
