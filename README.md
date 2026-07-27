@@ -69,32 +69,32 @@ Java(Servlet/JSP)を使用して開発したBMI計算Webアプリです。
 
 ```text
 ブラウザ
-    │
-    ▼
-LoginServlet（Controller）
-    │
-    ▼
-UserDao（DAO）
-    │
-    ▼
+   │
+   ▼
+LoginServlet
+   │
+   ▼
+UserDao
+   │
+   ▼
 MySQL
 
-ログイン成功
-    │
-    ▼
-Session保存
-    │
-    ▼
-input.jsp（View）
-    │
-    ▼
-HealthServlet（Controller）
-    │
-    ▼
-BmiModel（Model）
-    │
-    ▼
-result.jsp（View）
+認証成功
+   │
+   ▼
+Session
+   │
+   ▼
+input.jsp
+   │
+   ▼
+HealthServlet
+   │
+   ▼
+BmiModel
+   │
+   ▼
+bmi.jsp
 ```
 
 ---
