@@ -50,9 +50,16 @@ public class LoginServlet extends HttpServlet {
 
         // 判定結果
         if (user != null) {
-            response.getWriter().println("ログイン成功！");
+            request.getSession().setAttribute("loginUser", user);
+
+            response.sendRedirect(
+                request.getContextPath() + "/input.jsp"
+            );
         } else {
-            response.getWriter().println("ログイン失敗！");
+            request.setAttribute("errorMessage", "ログインIDまたはパスワードが違います。");
+
+            request.getRequestDispatcher("/WEB-INF/login.jsp")
+                   .forward(request, response);
         }
     }
 }
