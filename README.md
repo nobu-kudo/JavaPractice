@@ -43,31 +43,55 @@ Java(Servlet/JSP)を使用して開発したBMI計算Webアプリです。
 
 ## 使用技術
 
-- Java
+- Java 21
 - Servlet
 - JSP
+- JDBC
+- MySQL 8.4
 - HTML5
 - CSS3
 - Apache Tomcat 11
-- Eclipse
+- Eclipse Pleiades
 - Git / GitHub
 
 ---
-
 ## 機能
 
+- ログイン認証
+- ログアウト
+- セッション管理
+- 未ログイン時のアクセス制御
 - 身長・体重入力
 - BMI値の計算
 - BMI値を小数第2位で四捨五入
+- BMI判定（低体重・普通体重・肥満）
 - 診断結果画面表示
 - MVCモデルによる実装
-
+- JDBCによるデータベース接続
+- MySQLによるユーザー管理
 ---
 
 ## システム構成（MVC）
 
-```
+```text
 ブラウザ
+    │
+    ▼
+LoginServlet（Controller）
+    │
+    ▼
+UserDao（DAO）
+    │
+    ▼
+MySQL
+
+ログイン成功
+    │
+    ▼
+Session保存
+    │
+    ▼
+input.jsp（View）
     │
     ▼
 HealthServlet（Controller）
@@ -76,12 +100,17 @@ HealthServlet（Controller）
 BmiModel（Model）
     │
     ▼
-bmi.jsp（View）
+result.jsp（View）
 ```
 
 ---
 
 ## 画面
+
+#### ログイン画面
+
+<img width="950" height="500" alt="スクリーンショット 2026-07-27 143540" src="https://github.com/user-attachments/assets/ce2fae24-6b56-4666-a14c-c2a95f05a2aa" />
+
 
 ### 入力画面
 
@@ -94,8 +123,30 @@ bmi.jsp（View）
 
 ## 今後追加したい機能
 
-- 入力値のバリデーション
-- BMI判定（低体重・普通体重・肥満）
-- MySQLへの保存
-- 履歴表示
-- ログイン機能
+- 新規ユーザー登録
+- BMI履歴保存
+- BMI履歴削除
+- ユーザー情報編集
+- パスワード暗号化
+- 入力値バリデーション強化
+
+## 学習内容
+
+本アプリでは以下の技術を学習・実装しました。
+
+- Servlet / JSPによるMVCアーキテクチャ
+- JDBCを利用したMySQLとの接続
+- DAOパターンによるデータアクセス
+- Sessionを利用したログイン認証
+- ログアウト処理
+- セッションによるアクセス制御
+- Git / GitHubによるバージョン管理
+
+- ## ポートフォリオとして工夫した点
+
+- MVCモデルを意識した設計
+- DAOパターンを用いたデータベースアクセス
+- MySQLによるユーザー認証機能
+- Sessionを利用したログイン管理
+- 未ログイン時の画面アクセス制御
+- GitHubで継続的に機能追加・コミット履歴を管理
